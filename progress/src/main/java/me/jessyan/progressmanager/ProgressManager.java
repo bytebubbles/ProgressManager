@@ -466,4 +466,13 @@ public final class ProgressManager {
         }
         return object;
     }
+
+    public void release(){
+        if(mRequestListeners != null){
+            mRequestListeners.clear();
+        }
+        if(mResponseListeners != null){
+            mResponseListeners.clear();
+        }
+    }
 }
